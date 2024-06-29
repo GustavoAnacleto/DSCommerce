@@ -36,8 +36,7 @@ public class ProductControler {
 	public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable) {
 		 Page<ProductDTO> dto = service.findAll(pageable);	
 		 return ResponseEntity.ok(dto);
-	}
-	
+	}	
 	@PostMapping
 	public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
 		dto = service.insert(dto);
